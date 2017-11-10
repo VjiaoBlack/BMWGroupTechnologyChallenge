@@ -5,10 +5,10 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "ejs": "^2.5.7",
-    "express": "latest",
-    "express-validator": "^4.3.0",
-    "mongodb": "^2.2.33"
+    "body-parser": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-validator": "*",
+    "mongodb": "*"
   }
 }

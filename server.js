@@ -20,12 +20,11 @@ var MongoClient = require('mongodb').MongoClient
 
 // connection URL
 // usually dont make this public
-var url = 'mongodb://heroku_dsn2jqrk:88h8ur0uja5ceckl5kkktuk57p@ds257485.mlab.com:57485/heroku_dsn2jqrk';
-
+var url = 'mongodb://heroku_tsvzp3jp:be6kuh9l6qrkp602jntspm3lcc@ds157475.mlab.com:57475/heroku_tsvzp3jp';
 // connect to the server
 MongoClient.connect(url, function(err, db) {
   if (err) {
-    console.log(err)
+    throw err;
   }
   assert.equal(null, err);
   console.log("Connected successfully to server");
