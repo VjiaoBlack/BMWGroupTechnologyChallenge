@@ -1,0 +1,58 @@
+<!doctype html>
+<head>
+  <title>Traffic Data</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<!-- Figure out a better way to display these signs -->
+  <% for(var i = 0; i < trafficsigns.length; i++) { %>
+    <div class="sign">
+      <table>
+        <tr>
+          <td>Latitude</td>
+          <td><%= trafficsigns[i]["latitude"] %></td>
+        </tr>
+
+        <tr>
+          <td>Longitude</td>
+          <td><%= trafficsigns[i]["longitude"] %></td>
+        </tr>
+
+        <tr>
+          <td>Name</td>
+          <td><%= trafficsigns[i]["signtype"] %></td>
+        </tr>
+      </table>
+    </div>
+  <% } %>
+
+  <div id="form-div">
+    <form action="/view" method="post">
+        <label for="latitude">Latitude:</label>
+      <% if (errors[0]) {%>
+        <p class="warning">Latitude needs to be a double.</p>
+      <% } %>
+        <input type="float" id="latitude" name="latitude" />
+        <br />
+
+        <label for="longitude">Longitude:</label>
+      <% if (errors[1]) {%>
+        <p class="warning">Longitude needs to be a double.</p>
+      <% } %>
+        <input type="float" id="longitude" name="longitude" />
+        <br />
+
+        <label for="radius">Radius:</label>
+      <% if (errors[2]) {%>
+        <p class="warning">Radius needs to be a double.</p>
+      <% } %>
+        <input type="float" id="radius" name="radius" />
+        <br />
+
+      <input class="button" type="submit" value="Find Signs" />
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* Decrease contrast */
+html {
+	background-color: #EEE;
+}
+
+label {
+	color: #333;
+}
+
+/* Use sans serif fonts */
+* {
+	font-family: sans-serif;
+}
+
+.warning {
+	color: #E55;
+	margin: 0;
+	padding: 0;
+}
+
+/* Center form */
+#form-div {
+    height: 200px;
+    width: 400px;
+    margin: auto auto;
+}
+
+#link {
+	text-align: center;
+	margin-top: 100px;
+}
+
+/* formats displaying a traffic sign's data */
+.sign {
+	width: 200px;
+	margin: 30px auto;
+}
+
+td {
+	padding-right: 20px;
+}
+
+form {
+	padding: 50px;
+}
+
+input {
+	width: 100%;
+	margin: 2px;
+}
+
+.button {
+	width: 100px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
