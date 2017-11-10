@@ -19,7 +19,8 @@ var MongoClient = require('mongodb').MongoClient
   , assert = require('assert');
 
 // connection URL
-var url = 'mongodb://localhost:27017/myproject';
+// usually dont make this public
+var url = 'mongodb://heroku_dsn2jqrk:88h8ur0uja5ceckl5kkktuk57p@ds257485.mlab.com:57485/heroku_dsn2jqrk';
 
 // connect to the server
 MongoClient.connect(url, function(err, db) {
