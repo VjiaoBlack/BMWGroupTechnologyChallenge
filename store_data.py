@@ -3,7 +3,7 @@
 import requests
 import json
 
-url = "https://radiant-cliffs-86975.herokuapp.com/"
+url = "https://radiant-cliffs-86975.herokuapp.com"
 
 traffic_sign_types = json.load(open('traffic_sign_types.json'))
 print(traffic_sign_types)

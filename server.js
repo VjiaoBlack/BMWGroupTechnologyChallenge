@@ -24,6 +24,9 @@ var url = 'mongodb://heroku_dsn2jqrk:88h8ur0uja5ceckl5kkktuk57p@ds257485.mlab.co
 
 // connect to the server
 MongoClient.connect(url, function(err, db) {
+  if (err) {
+    console.log(err)
+  }
   assert.equal(null, err);
   console.log("Connected successfully to server");
   db.close();
