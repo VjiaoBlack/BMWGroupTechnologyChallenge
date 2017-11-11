@@ -2,6 +2,7 @@ var express = require("express");
 
 // bodyParser is used for parsing POST requests
 var bodyParser = require('body-parser')
+console.log("TEST0")
 
 // create express app
 var app = express();
@@ -18,6 +19,8 @@ var path = __dirname + '/views/';
 var MongoClient = require('mongodb').MongoClient
   , assert = require('assert');
 
+console.log("TESTA")
+
 // connection URL
 // usually dont make this public
 var url = 'mongodb://heroku_tsvzp3jp:be6kuh9l6qrkp602jntspm3lcc@ds157475.mlab.com:57475/heroku_tsvzp3jp';
@@ -30,6 +33,8 @@ MongoClient.connect(url, function(err, db) {
   console.log("Connected successfully to server");
   db.close();
 });
+
+console.log("TESTB")
 
 // get traffic sign types
 var trafficSignTypesList = require('./traffic_sign_types.json');
@@ -100,6 +105,7 @@ var findTrafficSigns = function(db, constraints, callback) {
 }
 
 
+console.log("TESTC")
 
 // print out type of HTTP request
 router.use(function (req, res, next) {

@@ -9,6 +9,6 @@
     "ejs": "latest",
     "express": "latest",
     "express-validator": "latest",
-    "mongodb": "latest"
+    "mongodb": "^3.6.0"
   }
 }
